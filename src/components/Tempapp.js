@@ -5,7 +5,9 @@ const Tempapp = () => {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState("");
     const [sun , setSun] = useState(null);
-    const [setImage] = useState("Clouds");
+    useEffect(() => {
+  // Your useEffect logic here
+    }, [setImage]);
     useEffect(() => {
         const fetchApi = async () => {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=f59d12c66646f26e40c1df9c23081047&units=metric`;
